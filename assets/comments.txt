@@ -1,0 +1,21 @@
+API DOC REFERENCE
+
+BASE URL: 'https://api.weatherapi.com/v1/'
+
+KEY: '.jason?key=f3315e9121504e948af175459220502'
+
+CURRENT: '/current.'
+
+ATTRIBUTES:
+  - Temperature = '.current.temp_c'
+  - Wind = '.current.wind_mph'
+  - Humidity = '.current.humidity'
+  - UV Index = '.current.uv'
+
+URL EXAMPLE FOR MIAMI: https://api.weatherapi.com/v1/current.json?key=f3315e9121504e948af175459220502&q=Miami&aqi=no
+
+
+FORERCAST: /forecast.
+FORECAST LENGHT : &days=5
+
+
