@@ -3,9 +3,6 @@ var locationTest = 'https://api.weatherapi.com/v1/current.json?key=f3315e9121504
 var locationData = [];
 var locationDataTitle = ['Temperature:', 'Wind Speed:', 'UV Index:', 'Date:', 'Condition Image:', 'Condition:'];
 
-
-
-
 var currentSearchHandler = function (citySearch) {          // receves city name as string ('miami') -> outputs the full API URL based search input
   var baseUrl = 'https://api.weatherapi.com/v1';
   var searchType = '/current';
