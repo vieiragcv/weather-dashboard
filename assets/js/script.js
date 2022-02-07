@@ -3,6 +3,11 @@ var locationTest = 'https://api.weatherapi.com/v1/current.json?key=f3315e9121504
 var locationData = [];
 var locationDataTitle = ['Temperature:', 'Wind Speed:', 'UV Index:', 'Date:', 'Condition Image:', 'Condition:'];
 
+
+console.log(searchButton);
+
+
+
 var currentSearchHandler = function (citySearch) {          // receves city name as string ('miami') -> outputs the full API URL based search input
   var baseUrl = 'https://api.weatherapi.com/v1';
   var searchType = '/current';
@@ -35,11 +40,24 @@ fetch(apiURL)
   console.log(locationData);
 });
 
+
+var functionTBD = function() {
+  var cityName = document.getElementById('input-1').value;
+  console.log(cityName);
+}
+
+
+
+
 /* -------------------------------------------------------------------------------
 -                                 EVENT LISTENERS
 ------------------------------------------------------------------------------- */
 
-// var userSearch = document.addEventListener('submit', functionNameTBD());
+
+var formSearch = document.getElementById('search-form');
+formSearch.addEventListener('submit', )
+
+
 
 
 
