@@ -17,7 +17,7 @@ var forecastSearchHandler = function (searchedName) {
   return fullUrl;
 }
 
-var apiURL = forecastSearchHandler('miami'); // TEMPORARY
+var apiURL = forecastSearchHandler('london'); // TEMPORARY
 
 var forecastWeather = function(value) {  
   fetch(apiURL)
@@ -26,13 +26,14 @@ var forecastWeather = function(value) {
       
       console.log('success');
       response.json().then(function(data) {
+        var locationName = data.location.name;
         var dateSlot = data.forecast.forecastday[value].date;                   // local date and time (at moment of search)
         var tempSlot = data.forecast.forecastday[value].day.avgtemp_f;         // temperature in F  
         var windSlot = data.forecast.forecastday[value].day.maxwind_mph;       // max wind speed
         var uvSlot = data.forecast.forecastday[value].day.uv;                // uv
         var condImgSlot = data.forecast.forecastday[value].day.condition.icon;    // condition image
         var condTxtSlot = data.forecast.forecastday[value].day.condition.text;    // condition text
-        forecastData[value] = {dateSlot, tempSlot, windSlot, uvSlot, condImgSlot, condTxtSlot};
+        forecastData[value] = {locationName, dateSlot, tempSlot, windSlot, uvSlot, condImgSlot, condTxtSlot};
         
         return forecastData;
       });
@@ -51,6 +52,50 @@ var getAllData = function () {
   return forecastDays;
 }
 
+var currentBoxEl = document.querySelector('#current-box');
+
+var populateDay0 = function () {
+  var locationEl = document.createElement('h3');
+  var locationContent = forecastData[0].locationname;
+  console.log(locationContent);
+  locationEl.innerHTML = '';
+  var tempEl = document.createElement('p');
+  var windEl = document.createElement('p');
+  var humidityEl = document.createElement('p');
+  var uvEl = document.createElement('p');
+}
+
+var populateDay1 = function () {
+  var locationEl = document.createElement('h3');
+  var tempEl = document.createElement('p');
+  var windEl = document.createElement('p');
+  var humidityEl = document.createElement('p');
+  var uvEl = document.createElement('p');
+}
+
+var populateDay2 = function () {
+  var locationEl = document.createElement('h3');
+  var tempEl = document.createElement('p');
+  var windEl = document.createElement('p');
+  var humidityEl = document.createElement('p');
+  var uvEl = document.createElement('p');
+}
+
+var populateDay3 = function () {
+  var locationEl = document.createElement('h3');
+  var tempEl = document.createElement('p');
+  var windEl = document.createElement('p');
+  var humidityEl = document.createElement('p');
+  var uvEl = document.createElement('p');
+}
+
+var populateDay4 = function () {
+  var locationEl = document.createElement('h3');
+  var tempEl = document.createElement('p');
+  var windEl = document.createElement('p');
+  var humidityEl = document.createElement('p');
+  var uvEl = document.createElement('p');
+}
 
 getAllData();
 

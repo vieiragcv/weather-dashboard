@@ -1,5 +1,80 @@
 .search-form {
+  display: inline-block;
   border-style: double;
   border-color: black;
-  border-bottom: 5px;
+  display: inline-block;
+
+}
+
+button, input, h3 {
+  display: inline-block;
+  width: 100%;
+}
+
+header {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(left, #1C6EA4 0%, #2388CB 67%, #144E75 100%);
+  background: -webkit-linear-gradient(left, #1C6EA4 0%, #2388CB 67%, #144E75 100%);
+  background: linear-gradient(to right, #1C6EA4 0%, #2388CB 67%, #144E75 100%);
+  text-align: center;
+}
+
+header h3 {
+  color: white;
+}
+
+.search-log {
+  border-top-style: double;
+  margin-top: 10px;
+  border-top-color: black;
+}
+
+#navigation-log {
+  padding:0;
+  display: inline-block;
+  width: 100%;
+  padding-left: 0%;
+}
+
+
+li {
+  display:inline-block;
+  width: 100%;
+  background-color: gray;
+  border-radius: 3px;
+  margin: 2px 2px 2px 0px;
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+#current-box {
+  border-style: solid;
+  border-color: black;
+  border: 1px 1px 1px 1px;
+  padding: 5px 5px 5px 5px;
+}
+#five-day-boxes {
+  padding: 0;
+}
+
+.forecast-box {
+  background-color: #2388CB;
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 3px;
+}
+
+.forecast-box p {
+  color: white;
+}
+
+.zero-border {
+  border: 0;
+}
+.zero-padding {
+  padding: 0;
+}
+
+#input-1 {
+  border-radius: 3px;
 }
