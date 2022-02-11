@@ -1,8 +1,11 @@
+/* --------------------------------------------------------------------------------------------
+-                                      GLOBAL VARIABLES
+-------------------------------------------------------------------------------------------- */
+
 var baseUrl = 'https://api.weatherapi.com/v1';
 var key = '.json?key=f3315e9121504e948af175459220502';
 var currentSuffix = '&aqi=yes';
 var forecastSuffix = '&days=6&aqi=no&alerts=no';
-
 var locationData = [];
 var forecastData = [];
 var forecastDays = [];
@@ -27,12 +30,13 @@ var forecastWeather = function(value) {
       console.log('success');
       response.json().then(function(data) {
         var locationName = data.location.name;
-        var dateSlot = data.forecast.forecastday[value].date;                   // local date and time (at moment of search)
-        var tempSlot = data.forecast.forecastday[value].day.avgtemp_f;         // temperature in F  
-        var windSlot = data.forecast.forecastday[value].day.maxwind_mph;       // max wind speed
-        var uvSlot = data.forecast.forecastday[value].day.uv;                // uv
+        var dateSlot = data.forecast.forecastday[value].date;                     // local date and time (at moment of search)
+        var tempSlot = data.forecast.forecastday[value].day.avgtemp_f;            // temperature in F  
+        var windSlot = data.forecast.forecastday[value].day.maxwind_mph;          // max wind speed
+        var uvSlot = data.forecast.forecastday[value].day.uv;                     // uv
         var condImgSlot = data.forecast.forecastday[value].day.condition.icon;    // condition image
         var condTxtSlot = data.forecast.forecastday[value].day.condition.text;    // condition text
+
         forecastData[value] = {locationName, dateSlot, tempSlot, windSlot, uvSlot, condImgSlot, condTxtSlot};
         
         return forecastData;
@@ -124,7 +128,6 @@ var functionTBD = function() {
 
 
 /* COULD BE REMOVED 
-
 
 var currentSearchHandler = function (citySearch) {          // receves city name as string ('miami') -> outputs the full API URL based search input
   var searchType = '/current'; 

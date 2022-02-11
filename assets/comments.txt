@@ -19,3 +19,33 @@ FORERCAST: /forecast.
 FORECAST LENGHT : &days=5
 
 
+/*                           OLD CODE - Redundant since forecast also pulls current day                       */
+
+var currentSearchHandler = function (citySearch) {          
+  var searchType = '/current'; 
+  var fullUrl = baseUrl + searchType + key + '&q=' + citySearch + currentSuffix;
+  console.log(fullUrl);
+  return fullUrl;
+}
+var currentWeather = function () {
+
+  fetch(apiURL)
+  .then(function(response) {
+    if(response.ok) {
+      console.log('success');
+      response.json().then(function(data) {
+        console.log(data);
+        locationData[0] = data.current.temp_f;           // temperature in F
+        locationData[1] = data.current.wind_mph;         // wind speed
+        locationData[2] = data.current.uv;               // uv
+        locationData[3] = data.location.localtime;       // local date and time (at moment of search)
+        locationData[4] = data.current.condition.icon;   // condition image
+        locationData[5] = data.current.condition.text;   // condition text
+      });
+    }
+    else {
+      alert('Error');
+    }
+    //console.log(locationData);
+  });
+}

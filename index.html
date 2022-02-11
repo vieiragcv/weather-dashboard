@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
   <header>
     <div class="row">
       <div class="col">
@@ -19,20 +20,26 @@
   </header>
 
   <div class="container-fluid">
-
     <div class="row">
 
-      <div class="col-2 float-left">                                <!-- LEFT SIDE -->
+<!--------------------------------------------------------------------------------
+  -                            SEARCH
+--------------------------------------------------------------------------------->
 
+      <div class="col-2 float-left">                                
         <h4>Search for a City:</h4>
-        <div class="">                                      <!--SEARCH BOX AND BUTTON-->
+        <div class="">                                      
           <form id="search-form" class="form-control-lg">
             <input id='input-1' type="text"></input> </br> 
             <button id="button-1"class="btn btn-primary btn-sm" type="submit" value="Submit">Search</button>
           </form>
         </div>
 
-        <div class="search-log">                                    <!--SEARCH HISTORY-->
+<!--------------------------------------------------------------------------------
+  -                            SEARCH LOG
+--------------------------------------------------------------------------------->
+
+        <div class="search-log">                                    
           <h5>History</h5>
           <ul id="navigation-log">
             <li><a>Rio de Janeiro</a></li>
@@ -41,20 +48,25 @@
             <li><a>Rio de Janeiro</a></li>
           </ul>
         </div>
-
       </div>
 
-      <div class="col float-right zero-border zero-padding">                                    <!-- RIGHT SIDE -->
+<!--------------------------------------------------------------------------------
+  -                            TODAY'S WEATHER
+--------------------------------------------------------------------------------->
 
-        <div class="" id="current-box">                                 <!--CURRENT WEATHER-->
+      <div class="col float-right zero-border zero-padding">                                   
+        <div class="" id="current-box">                                 
           <h3>Miami</h3> </br>
-          <p>Temp: 74</p> </br>                                                    <!----temp---->
-          <p>Wind: 345</p> </br>                                                   <!----wind---->
-          <p>Humidity: 46%</p> </br>                                             <!--humidity-->
-          <p>UV Index: 0.47</p> </br>                                                  <!---UV Idx--->
+          <p>Temp: 74</p> </br>                                           
+          <p>Wind: 345</p> </br>                                           
+          <p>Humidity: 46%</p> </br>                                           
+          <p>UV Index: 0.47</p> </br>                                                  
         </div>
-
-        <div class="container-fluid" id="five-day-boxes">                                <!--5 DAY FORECAST-->
+<!--------------------------------------------------------------------------------
+  -                            WEATHER FORECAST
+--------------------------------------------------------------------------------->
+        
+        <div class="container-fluid" id="five-day-boxes">                                
           <div class="row">
             <h3>5-day Forecast</h3>
             <div class="col-sm forecast-box">
